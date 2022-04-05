@@ -17,7 +17,7 @@ namespace Object2QueryString
             foreach (var property in source.GetType().GetProperties())
             {
                 var key = useFullname ? $"{property.ReflectedType?.Name}.{property.Name}" : property.Name;
-                var value = property.GetValue(source, null) ?? "";          
+                var value = property.GetValue(source, null) ?? "";
                 var elems = value as IList;
                 if (elems != null)
                 {
